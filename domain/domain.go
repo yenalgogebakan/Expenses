@@ -4,7 +4,6 @@ import (
 	"time"
 )
 
-
 type user struct {
 	userId int64 		`json: "userid"`
 	name string 		`json: "name"`
