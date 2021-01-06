@@ -6,7 +6,7 @@ in golang.
 
 **GLC** will be de final production system but **SQLITE** will be used for local development and test.
 
-CleanCode architectural code organization rules are strictly implemented by using interfaces.
+CleanCode architectural code organization rules are strictly implemented by using interfaces. 
 Deneme
 sdfdfd
 
