@@ -7,6 +7,8 @@ in golang.
 **GLC** will be de final production system but **SQLITE** will be used for local development and test.
 
 CleanCode architectural code organization rules are strictly implemented by using interfaces.
+Deneme
+sdfdfd
 
 **DOMAIN**
 
@@ -20,7 +22,7 @@ info _string_
 gender _string_
 
 __PASSWD__
-userId _int64_\n
+userId _int64_
 passwd _string_
 
 __USERLOG__
