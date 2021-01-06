@@ -20,7 +20,7 @@ info _string_
 gender _string_
 
 __PASSWD__
-userId _int64_
+userId _int64_\n
 passwd _string_
 
 __USERLOG__
