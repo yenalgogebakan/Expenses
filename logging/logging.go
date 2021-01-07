@@ -105,18 +105,18 @@ func NewLogger (logname string, logpath string)  (*logrus.Logger, error) {
 	return nil, nil // should not be
 }
 
-func GetLogger (logname string)  (*logrus.Logger, error) {
+func GetLogger (logname string)  (*logrus.Logger) {
 	if logname == "" {
 		if logman.logs["DEFAULT"] == nil {
-			return nil, fmt.Errorf("GetLogger : No default log entry found ")
+			return nil
 		} else {
-			return logman.logs ["DEFAULT"], nil
+			return logman.logs ["DEFAULT"]
 		}
 	} else {
 		if logman.logs[logname] == nil {
-			return nil, fmt.Errorf("GetLogger : No log entry found %v ", logname)
+			return nil
 		} else {
-			return logman.logs [logname], nil
+			return logman.logs [logname]
 		}
 	}
 }
