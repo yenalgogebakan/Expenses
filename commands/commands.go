@@ -11,12 +11,12 @@ type Command interface {
 }
 
 type Invoker struct {
-	commands map[string]*Command
+	commands map[string]Command
 }
 
-func (invoker *Invoker) RegCommand (commandName string, c *Command) error {
+func (invoker *Invoker) RegCommand (commandName string, c Command) error {
 	if invoker.commands == nil {
-		invoker.commands = make (map[string]*Command)
+		invoker.commands = make (map[string]Command)
 		logging.GetLogger("INFO").WithFields(logrus.Fields{
                 "package": "commands",
 		"source":"comands.go",
@@ -47,7 +47,7 @@ func (invoker *Invoker) ExeCommands (commandName string) error {
 // If commandname == "", execute all commands, else the specic command
 	if commandName == "" {
 		for cmdname, cmd := range invoker.commands {
-			if err := *cmd.Execute (); err != nil {
+			if err := cmd.Execute (); err != nil {
 				logging.GetLogger("DEFAULT").WithFields(logrus.Fields{
 				"package": "commands",
 				"source": "commands.go",
