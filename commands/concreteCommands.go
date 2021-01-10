@@ -1,34 +1,54 @@
 package commands
 
 import (
-//        "domain"
+        "domain"
 //        "errors"
-//        "logging"
-//        "github.com/sirupsen/logrus"
+        "logging"
+        "github.com/sirupsen/logrus"
 	"math/rand"
 	"time"
+	"repository"
 )
 
 // New user Command
-type CMD_NewUserParams struct {
-	UserId int `json:"userid"`
-	Name string `json:"name"`
-	Surname string `json:"surname"`
-	Email string `json:"email"`
-	DateCreated time.Time `json:"datecreated"`
-	Info string `json:"info"`
-	Gender string `json:"gender"`
-}
-
 type CMD_NewUser struct {
-	P *CMD_NewUserParams
+	P *domain.User
 }
 
 func (cmd_newuser CMD_NewUser) Execute () error {
+	rand.Seed(time.Now().UnixNano())
 	cmd_newuser.P.UserId = rand.Intn (1000)
-	cmd_newuser.P.DateCreated = time.Now ()
+
+	//userid, err := repository.Mainrepo.StoreUser (cmd_newuser.P)
+	_, err := repository.Mainrepo.StoreUser (cmd_newuser.P)
+	if err != nil {panic (err)}
+	logging.GetLogger("INFO").WithFields(logrus.Fields{
+        "package": "commands",
+        "source":"concreteCommands.go",
+        "func": "CMD NewUser",
+        }).Info("errtxt-command executed successfully")
 
 	return nil
 
-	// Write it to dbase and put it active players list
+}
+
+// New expense Command
+type CMD_NewExpense struct {
+	P *domain.Expense
+}
+
+func (cmd_newexpense CMD_NewExpense) Execute () error {
+	rand.Seed(time.Now().UnixNano())
+	cmd_newexpense.P.ExpenseId = rand.Intn (1000)
+
+	_, _, err := repository.Mainrepo.StoreExpense (cmd_newexpense.P)
+	if err != nil {panic (err)}
+	logging.GetLogger("INFO").WithFields(logrus.Fields{
+        "package": "commands",
+        "source":"concreteCommands.go",
+        "func": "CMD NewExpense",
+        }).Info("errtxt-command executed successfully")
+	
+	return nil
+
 }

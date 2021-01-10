@@ -24,3 +24,18 @@
 {"func":"main ()","level":"info","msg":"Expenses is starting !!!","package":"main","source":"main.go","time":"2021-01-08T17:06:30+03:00"}
 {"func":"main ()","level":"info","msg":"Expenses is starting !!!","package":"main","source":"main.go","time":"2021-01-08T17:10:34+03:00"}
 {"func":"main ()","level":"info","msg":"Expenses is starting !!!","package":"main","source":"main.go","time":"2021-01-08T17:46:08+03:00"}
+{"func":"main ()","level":"info","msg":"Expenses is starting !!!","package":"main","source":"main.go","time":"2021-01-08T22:38:23+03:00"}
+{"func":"main ()","level":"info","msg":"Expenses is starting !!!","package":"main","source":"main.go","time":"2021-01-09T17:14:42+03:00"}
+{"func":"main ()","level":"info","msg":"Expenses is starting !!!","package":"main","source":"main.go","time":"2021-01-09T17:17:58+03:00"}
+{"func":"main ()","level":"info","msg":"Expenses is starting !!!","package":"main","source":"main.go","time":"2021-01-09T17:18:55+03:00"}
+{"func":"main ()","level":"info","msg":"Expenses is starting !!!","package":"main","source":"main.go","time":"2021-01-09T17:20:31+03:00"}
+{"func":"main ()","level":"info","msg":"Expenses is starting !!!","package":"main","source":"main.go","time":"2021-01-10T16:35:38+03:00"}
+{"func":"main ()","level":"info","msg":"Expenses is starting !!!","package":"main","source":"main.go","time":"2021-01-10T16:42:12+03:00"}
+{"func":"main ()","level":"info","msg":"Expenses is starting !!!","package":"main","source":"main.go","time":"2021-01-10T17:40:24+03:00"}
+{"func":"main ()","level":"info","msg":"Expenses is starting !!!","package":"main","source":"main.go","time":"2021-01-10T17:49:23+03:00"}
+{"func":"CMD NewExpense","level":"info","msg":"errtxt-command executed successfully","package":"commands","source":"concreteCommands.go","time":"2021-01-10T17:49:29+03:00"}
+{"func":"main ()","level":"info","msg":"Expenses is starting !!!","package":"main","source":"main.go","time":"2021-01-10T18:07:11+03:00"}
+{"func":"CMD NewExpense","level":"info","msg":"errtxt-command executed successfully","package":"commands","source":"concreteCommands.go","time":"2021-01-10T18:07:18+03:00"}
+{"func":"main ()","level":"info","msg":"Expenses is starting !!!","package":"main","source":"main.go","time":"2021-01-10T18:08:25+03:00"}
+{"func":"CMD NewExpense","level":"info","msg":"errtxt-command executed successfully","package":"commands","source":"concreteCommands.go","time":"2021-01-10T18:09:06+03:00"}
+{"func":"CMD NewExpense","level":"info","msg":"errtxt-command executed successfully","package":"commands","source":"concreteCommands.go","time":"2021-01-10T18:09:43+03:00"}

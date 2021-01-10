@@ -3,8 +3,11 @@ package main
 import (
 	"fmt"
 	"github.com/sirupsen/logrus"
-	"logging"
 	"github.com/gin-gonic/gin"
+	"database/sql"
+	_ "github.com/mattn/go-sqlite3"
+	"logging"
+	"repository"
 )
 // Global variables
 var infolog *logrus.Logger
@@ -24,34 +27,35 @@ func main () {
 	}).Info("Expenses is starting !!!")
 
 	route = gin.Default()
-	defineHandlers ()
+	prepareHandlers ()
+	prepareRepository ()
 	route.Run(":8085")
 
 }
-/*
-func newuser(c *gin.Context) {
-	var user commands.CMD_NewUserParams
 
-	if c.BindJSON(&user) == nil {
-		fmt.Println("====== Bind By JSON ======")
-		fmt.Println(user.Name)
-		fmt.Println(user.Surname)
-	}
-
-
-
-//	c.String(200, "Success")
-	c.JSON (200, gin.H {"Name":user.Name, "Surname": user.Surname})
-}
-*/
-func defineHandlers () {
+func prepareHandlers () {
 // Simple group: v1
 	v1 := route.Group("/v1")
 
 	v1.PUT("/users", newuser)
+	v1.PUT("/expenses", newexpense)
 //	v1.GET("/users", getuser)
 //
 //	v1.PUT("/expenses", newexpense)
 //	v1.GET("/expenses", getexpense)
 //	v1.POST("/expenses", proexpense)
+}
+
+func prepareRepository () {
+	db, err := sql.Open("sqlite3", "Expenses.db")
+	if err != nil { panic(err) }
+	if db == nil { panic("db nil") }
+	repository.Mainrepo = repository.NewSqliteRepository (db)
+/*
+//Inmem
+	inmemdbpointer, err := inmempoool ("Expense")
+	if err != nill {panic (err)}
+	if inmemdbpointer == nil {panic(inmemdbpointer nil)}
+	repository.Mainrepo = repository.NewInmemRepository (inmemdbpointer)
+*/
 }

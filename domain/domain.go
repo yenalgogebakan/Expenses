@@ -3,43 +3,40 @@ package domain
 import (
 	"time"
 )
-
-type user struct {
-	userId int64 		`json: "userid"`
-	name string 		`json: "name"`
-	surname string 		`json: "surname"`
-	email string 		`json: "userid"`
-	dateCreated time.Time 	`json: "datecreated"`
-	info string 		`json: "info"`
-	gender string 		`json: "gender"`
+type User struct {
+        UserId int `json:"userid"`
+        Name string `json:"name"`
+        Surname string `json:"surname"`
+        Email string `json:"email"`
+        DateCreated time.Time `json:"datecreated"`
+        Info string `json:"info"`
+        Gender string `json:"gender"`
+}
+type Expense struct {
+        UserId int `json:"userid"`
+        ExpenseId int `json: "expenseid"`
+        Date time.Time `json: "date"`
+        ExpItem string `json: "expitem"`
+        Amount float64 `json: "amount"`
+        Info string `json: "indo"`
 }
 
-type passwd struct {
-	userId int64		`json: "userid"`
-	passwd string		`json: "passwd"`
+type Session struct {
+        SessionId int `json:"sessionid"`
+        User *User `json:"user"`
+        TimeOpened time.Time `json:"timeopened"`
+        IdleTime time.Time `json:"idletime"`
+        TimeClosed time.Time `json: "timeclosed"`
+}
+type Passwd struct {
+        UserId int `json: "userid"`
+        Passwd string `json: "passwd"`
 }
 
-type userlog struct {
-	userId int64		`json: "userid"`
-	logDate time.Time	`json: "logdate"`
-	action string		`json: "action"`
-	params string
-}
-
-type expenses struct {
-	userId int64		`json: "userid"`
-	enxpenseId int64	`json: "expenseid"`
-	date time.Time		`json: "date"`
-	expItem string		`json: "expitem"`
-	amaunt float64		`json: "amaunt"`
-	info string		`json: "indo"`
-}
-
-type sessions struct {
-	sessionId int64		`json: "sessionid"`
-	user *user		`json: "user"`
-	timeOpened time.Time	`json: "timeopened"`
-	idleTime time.Time	`json: "idletime"`
-	timeClosed time.Time	`json: "timeclosed"`
+type Userlog struct {
+	userId int `json:"userid"`
+	logDate time.Time `json:"logdate"`
+	action string `json:"action"`
+	params string `json:"params"`
 }
 
