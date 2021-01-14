@@ -13,18 +13,30 @@ func newuser (c *gin.Context) {
 	var user domain.User
 
 	if c.BindJSON(&user) == nil {
-		fmt.Println (user.Name, user.Surname)
-	}
+		var cmdnewuser commands.CMD_NewUser
+		cmdnewuser.P = &user
 
-	var cmdnewuser commands.CMD_NewUser
-	cmdnewuser.P = &user
+		err := cmdnewuser.Execute ()
+		if err != nil {
+			exception := err.Error ()
+			logging.GetLogger("DEFAULT").WithFields(logrus.Fields{
+			"package": "main",
+			"source": "handlers.go",
+			"func": "newuser",
+			}).Error("commands.CMD_NewUser.Execute error")
+			c.JSON (200, gin.H {"exception":exception, "data":user})
+		}
+	} else {
+                logging.GetLogger("DEFAULT").WithFields(logrus.Fields{
+                "package": "main",
+                "source": "handlers.go",
+                "func": "newuser",
+                }).Error("can not decode JSON to user")
+		exception := "CAN NOT DECEODE JSON TO USER STRUCT"
+		c.JSON (200, gin.H {"exception":exception, "data":user})
+        }
 
-	err := cmdnewuser.Execute ()
-	exception := ""
-	if err != nil {
-		exception = err.Error ()
-	}
-	c.JSON (200, gin.H {"exception":exception, "data":user})
+	c.JSON (200, gin.H {"exception":"SUCCESS", "data":user})
 }
 
 func newexpense (c *gin.Context) {
@@ -37,11 +49,11 @@ func newexpense (c *gin.Context) {
 		err := cmdnewexpense.Execute ()
 		if err != nil {
 			exception := err.Error ()
-                	logging.GetLogger("DEFAULT").WithFields(logrus.Fields{
-                	"package": "main",
-                	"source": "handlers.go",
-                	"func": "newexpense",
-                	}).Error("errtxt-error in new expense command")
+			logging.GetLogger("DEFAULT").WithFields(logrus.Fields{
+			"package": "main",
+			"source": "handlers.go",
+			"func": "newexpense",
+			}).Error("commands.CMD_NewExpense.Execute error")
 			c.JSON (200, gin.H {"exception":exception, "data":expense})
 		}
 	} else {
@@ -49,10 +61,43 @@ func newexpense (c *gin.Context) {
                 "package": "main",
                 "source": "handlers.go",
                 "func": "newexpense",
-                }).Error("errtxt-can not decode JSON to Expense")
+                }).Error("can not decode JSON to Expense")
 		exception := "CAN NOT DECEODE JSON TO EXPENCE STRUCT"
 		c.JSON (200, gin.H {"exception":exception, "data":expense})
         }
 
 	c.JSON (200, gin.H {"exception":"SUCCESS", "data":expense})
+}
+func getuser (c *gin.Context) {
+	var user domain.User
+	var username string
+
+	if c.BindJSON(&username) == nil {
+		fmt.Println ("SearchUsername :", username)
+
+		var cmdgetuser commands.CMD_GetUser
+		cmdgetuser.P = &user
+		cmdgetuser.Searchname = username
+
+		err := cmdgetuser.Execute ()
+		if err != nil {
+			exception := err.Error ()
+			logging.GetLogger("DEFAULT").WithFields(logrus.Fields{
+			"package": "main",
+			"source": "handlers.go",
+			"func": "getuser",
+			}).Error("commands.CMD_GetUser.Execute error")
+			c.JSON (200, gin.H {"exception":exception, "data":user})
+		}
+	} else {
+                logging.GetLogger("DEFAULT").WithFields(logrus.Fields{
+                "package": "main",
+                "source": "handlers.go",
+                "func": "getuser",
+                }).Error("can not decode JSON to username")
+		exception := "CAN NOT DECEODE JSON TO EXPENCE STRUCT"
+		c.JSON (200, gin.H {"exception":exception, "data":user})
+        }
+
+	c.JSON (200, gin.H {"exception":"SUCCESS", "data":user})
 }

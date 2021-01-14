@@ -39,3 +39,10 @@
 {"func":"main ()","level":"info","msg":"Expenses is starting !!!","package":"main","source":"main.go","time":"2021-01-10T18:08:25+03:00"}
 {"func":"CMD NewExpense","level":"info","msg":"errtxt-command executed successfully","package":"commands","source":"concreteCommands.go","time":"2021-01-10T18:09:06+03:00"}
 {"func":"CMD NewExpense","level":"info","msg":"errtxt-command executed successfully","package":"commands","source":"concreteCommands.go","time":"2021-01-10T18:09:43+03:00"}
+{"func":"main ()","level":"info","msg":"Expenses is starting !!!","package":"main","source":"main.go","time":"2021-01-14T15:02:01+03:00"}
+{"func":"main ()","level":"info","msg":"Expenses is starting !!!","package":"main","source":"main.go","time":"2021-01-14T15:12:25+03:00"}
+{"func":"StoreUser","level":"error","msg":"Kullanici basari ile kaydedildi. Kullanici ID :357","package":"repository","source":"repository.go","time":"2021-01-14T15:12:45+03:00","userId":357}
+{"func":"CMD NewUser","level":"info","msg":"errtxt-command executed successfully","package":"commands","source":"concreteCommands.go","time":"2021-01-14T15:12:45+03:00"}
+{"func":"StoreUser","level":"error","msg":"Kullanici basari ile kaydedildi. Kullanici ID :503","package":"repository","source":"repository.go","time":"2021-01-14T15:16:46+03:00","userId":503}
+{"func":"CMD NewUser","level":"info","msg":"errtxt-command executed successfully","package":"commands","source":"concreteCommands.go","time":"2021-01-14T15:16:46+03:00"}
+{"func":"main ()","level":"info","msg":"Expenses is starting !!!","package":"main","source":"main.go","time":"2021-01-14T18:20:06+03:00"}

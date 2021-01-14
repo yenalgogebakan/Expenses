@@ -39,7 +39,7 @@ func prepareHandlers () {
 
 	v1.PUT("/users", newuser)
 	v1.PUT("/expenses", newexpense)
-//	v1.GET("/users", getuser)
+	v1.GET("/users", getuser)
 //
 //	v1.PUT("/expenses", newexpense)
 //	v1.GET("/expenses", getexpense)
