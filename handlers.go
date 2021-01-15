@@ -1,7 +1,9 @@
 package main
 
 import (
-	"fmt"
+//	"fmt"
+//	"net/http"
+//	"io/ioutil"
 	"github.com/sirupsen/logrus"
 	"logging"
 	"github.com/gin-gonic/gin"
@@ -70,34 +72,21 @@ func newexpense (c *gin.Context) {
 }
 func getuser (c *gin.Context) {
 	var user domain.User
-	var username string
+	uname := c.Param("name")
 
-	if c.BindJSON(&username) == nil {
-		fmt.Println ("SearchUsername :", username)
+	var cmdgetuser commands.CMD_GetUser
+	cmdgetuser.P = &user
+	cmdgetuser.Searchname = uname
 
-		var cmdgetuser commands.CMD_GetUser
-		cmdgetuser.P = &user
-		cmdgetuser.Searchname = username
-
-		err := cmdgetuser.Execute ()
-		if err != nil {
-			exception := err.Error ()
-			logging.GetLogger("DEFAULT").WithFields(logrus.Fields{
-			"package": "main",
-			"source": "handlers.go",
-			"func": "getuser",
-			}).Error("commands.CMD_GetUser.Execute error")
-			c.JSON (200, gin.H {"exception":exception, "data":user})
-		}
-	} else {
-                logging.GetLogger("DEFAULT").WithFields(logrus.Fields{
-                "package": "main",
-                "source": "handlers.go",
-                "func": "getuser",
-                }).Error("can not decode JSON to username")
-		exception := "CAN NOT DECEODE JSON TO EXPENCE STRUCT"
-		c.JSON (200, gin.H {"exception":exception, "data":user})
-        }
-
-	c.JSON (200, gin.H {"exception":"SUCCESS", "data":user})
+	if err := cmdgetuser.Execute ();err != nil {
+		exception := err.Error ()
+		logging.GetLogger("DEFAULT").WithFields(logrus.Fields{
+		"package": "main",
+		"source": "handlers.go",
+		"func": "getuser",
+		}).Error("commands.CMD_GetUser.Execute error")
+		c.JSON (200, gin.H {"exception":exception})
+		return
+	}
+	c.JSON (200, gin.H {"exception":"SUCCESS", "data":cmdgetuser.P})
 }

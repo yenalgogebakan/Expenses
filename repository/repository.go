@@ -120,16 +120,15 @@ func (r *repoSqlite) StoreSession(session *domain.Session) (sessionId int, err e
 	return 0, nil
 }
 func (r *repoSqlite) GetUserByName(username string) (user *domain.User, err error) {
-	rows, err := r.pool.Query("SELECT USERID,NAME,SURNAME,EMAIL,INFO,GENDER FROM USER ORDER BY NAME WHERE NAME = ?", user.Name)
+	rows, err := r.pool.Query ("SELECT USERID,NAME,SURNAME,EMAIL,INFO,GENDER FROM USER WHERE NAME = ?", username)
 	if err != nil {
 		logging.GetLogger("DEFAULT").WithFields(logrus.Fields{
 		"package":"repository",
 		"source":"repository.go",
 		"func":"GetUserByName",
-		"errorpoint":"sqlQuery",
-		"username":username,
+		"errorpoint":"sql query",
 		}).Error (err.Error())
-		return nil, errors.New ("Kullanici tabloda aranirken hata olustu")
+		return nil, errors.New ("Kullanici aranirken SQL query hatasi olustu")
 	}
 	defer rows.Close()
 
@@ -173,7 +172,6 @@ func (r *repoSqlite) GetUserByName(username string) (user *domain.User, err erro
 			}).Info (tmpuser.Name, " isimli kullanici bulundu")
 		}
 	}
-
 	return &tmpuser, nil
 }
 func (r *repoSqlite) GetUserById(userid int) (user *domain.User, err error) {

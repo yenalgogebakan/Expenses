@@ -9,4 +9,5 @@
 #curl -d '{"name":"YENAL","surname":"GOGEBAKAN","email":"yenal.gogebakan@cybersoft.com.tr", "info":"cyberpark Teper", "gender":"E"}' -H "Content-Type: application/json" -X PUT localhost:8085/v1/users
 #curl -d '{"Name": "Ali", "Surname": "Deneme"}' -H "Content-Type: application/json" -X PUT localhost:8085/v1/users
 #curl -d '{"XXX": "Ali", "Surname": "Deneme"}' -H "Content-Type: application/json" -X PUT localhost:8085/v1/users
-curl -d '{"ername": "Ali"}' -H "Content-Type: application/json" -X GET localhost:8085/v1/users
+#curl  -X GET localhost:8085/v1/users/Yenal
+curl  -X GET localhost:8085/v1/users/YENAL

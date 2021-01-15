@@ -2,6 +2,7 @@ package commands
 
 import (
         "domain"
+//	"fmt"
 //        "errors"
         "logging"
         "github.com/sirupsen/logrus"
@@ -71,7 +72,9 @@ type CMD_GetUser struct {
 }
 func (cmd_getuser CMD_GetUser) Execute () error {
 	var err error
-	cmd_getuser.P, err = repository.Mainrepo.GetUserByName (cmd_getuser.Searchname)
+	var tmpuser *domain.User
+
+	tmpuser, err = repository.Mainrepo.GetUserByName (cmd_getuser.Searchname)
 	if err != nil {
 		logging.GetLogger("DEFAULT").WithFields(logrus.Fields{
 		"package":"commands",
@@ -81,7 +84,7 @@ func (cmd_getuser CMD_GetUser) Execute () error {
 		}).Error("repository.Mainrepo.StoreGetUserByName error")
 		return err
 	}
-
+	*(cmd_getuser.P) = *(tmpuser)
 	logging.GetLogger("INFO").WithFields(logrus.Fields{
         "package": "commands",
         "source":"concreteCommands.go",

@@ -46,3 +46,52 @@
 {"func":"StoreUser","level":"error","msg":"Kullanici basari ile kaydedildi. Kullanici ID :503","package":"repository","source":"repository.go","time":"2021-01-14T15:16:46+03:00","userId":503}
 {"func":"CMD NewUser","level":"info","msg":"errtxt-command executed successfully","package":"commands","source":"concreteCommands.go","time":"2021-01-14T15:16:46+03:00"}
 {"func":"main ()","level":"info","msg":"Expenses is starting !!!","package":"main","source":"main.go","time":"2021-01-14T18:20:06+03:00"}
+{"func":"main ()","level":"info","msg":"Expenses is starting !!!","package":"main","source":"main.go","time":"2021-01-15T11:16:20+03:00"}
+{"func":"main ()","level":"info","msg":"Expenses is starting !!!","package":"main","source":"main.go","time":"2021-01-15T11:22:06+03:00"}
+{"func":"main ()","level":"info","msg":"Expenses is starting !!!","package":"main","source":"main.go","time":"2021-01-15T11:54:25+03:00"}
+{"func":"main ()","level":"info","msg":"Expenses is starting !!!","package":"main","source":"main.go","time":"2021-01-15T12:15:50+03:00"}
+{"func":"main ()","level":"info","msg":"Expenses is starting !!!","package":"main","source":"main.go","time":"2021-01-15T12:23:13+03:00"}
+{"func":"main ()","level":"info","msg":"Expenses is starting !!!","package":"main","source":"main.go","time":"2021-01-15T12:26:27+03:00"}
+{"func":"main ()","level":"info","msg":"Expenses is starting !!!","package":"main","source":"main.go","time":"2021-01-15T12:30:10+03:00"}
+{"func":"main ()","level":"info","msg":"Expenses is starting !!!","package":"main","source":"main.go","time":"2021-01-15T12:32:15+03:00"}
+{"func":"StoreUser","level":"info","msg":"Kullanici basari ile kaydedildi. Kullanici ID :529","package":"repository","source":"repository.go","time":"2021-01-15T12:33:09+03:00","userId":529}
+{"func":"CMD NewUser","level":"info","msg":"command executed successfully","package":"commands","source":"concreteCommands.go","time":"2021-01-15T12:33:09+03:00"}
+{"func":"main ()","level":"info","msg":"Expenses is starting !!!","package":"main","source":"main.go","time":"2021-01-15T13:03:34+03:00"}
+{"func":"StoreUser","level":"info","msg":"Kullanici basari ile kaydedildi. Kullanici ID :260","package":"repository","source":"repository.go","time":"2021-01-15T13:03:37+03:00","userId":260}
+{"func":"CMD NewUser","level":"info","msg":"command executed successfully","package":"commands","source":"concreteCommands.go","time":"2021-01-15T13:03:37+03:00"}
+{"func":"main ()","level":"info","msg":"Expenses is starting !!!","package":"main","source":"main.go","time":"2021-01-15T13:09:26+03:00"}
+{"func":"main ()","level":"info","msg":"Expenses is starting !!!","package":"main","source":"main.go","time":"2021-01-15T15:17:58+03:00"}
+{"func":"main ()","level":"info","msg":"Expenses is starting !!!","package":"main","source":"main.go","time":"2021-01-15T15:26:03+03:00"}
+{"func":"main ()","level":"info","msg":"Expenses is starting !!!","package":"main","source":"main.go","time":"2021-01-15T15:27:05+03:00"}
+{"func":"main ()","level":"info","msg":"Expenses is starting !!!","package":"main","source":"main.go","time":"2021-01-15T15:28:11+03:00"}
+{"func":"GetUserByName","level":"info","msg":"Yenal isimli kullanici bulundu","package":"repository","source":"repository.go","time":"2021-01-15T15:28:14+03:00","userId":847,"username":"Yenal","usersurname":"Gogebakan"}
+{"func":"CMD GetUser","level":"info","msg":"command executed successfully","package":"commands","source":"concreteCommands.go","time":"2021-01-15T15:28:14+03:00"}
+{"func":"GetUserByName","level":"info","msg":"Yenal isimli kullanici bulundu","package":"repository","source":"repository.go","time":"2021-01-15T15:28:42+03:00","userId":847,"username":"Yenal","usersurname":"Gogebakan"}
+{"func":"CMD GetUser","level":"info","msg":"command executed successfully","package":"commands","source":"concreteCommands.go","time":"2021-01-15T15:28:42+03:00"}
+{"func":"main ()","level":"info","msg":"Expenses is starting !!!","package":"main","source":"main.go","time":"2021-01-15T15:30:44+03:00"}
+{"func":"GetUserByName","level":"info","msg":"Yenal isimli kullanici bulundu","package":"repository","source":"repository.go","time":"2021-01-15T15:30:46+03:00","userId":847,"username":"Yenal","usersurname":"Gogebakan"}
+{"func":"CMD GetUser","level":"info","msg":"command executed successfully","package":"commands","source":"concreteCommands.go","time":"2021-01-15T15:30:46+03:00"}
+{"func":"GetUserByName","level":"info","msg":"Yenal isimli kullanici bulundu","package":"repository","source":"repository.go","time":"2021-01-15T15:30:58+03:00","userId":847,"username":"Yenal","usersurname":"Gogebakan"}
+{"func":"CMD GetUser","level":"info","msg":"command executed successfully","package":"commands","source":"concreteCommands.go","time":"2021-01-15T15:30:58+03:00"}
+{"func":"main ()","level":"info","msg":"Expenses is starting !!!","package":"main","source":"main.go","time":"2021-01-15T16:05:36+03:00"}
+{"func":"GetUserByName","level":"info","msg":"Yenal isimli kullanici bulundu","package":"repository","source":"repository.go","time":"2021-01-15T16:05:39+03:00","userId":847,"username":"Yenal","usersurname":"Gogebakan"}
+{"func":"CMD GetUser","level":"info","msg":"command executed successfully","package":"commands","source":"concreteCommands.go","time":"2021-01-15T16:05:39+03:00"}
+{"func":"main ()","level":"info","msg":"Expenses is starting !!!","package":"main","source":"main.go","time":"2021-01-15T16:16:49+03:00"}
+{"func":"GetUserByName","level":"info","msg":"Yenal isimli kullanici bulundu","package":"repository","source":"repository.go","time":"2021-01-15T16:16:52+03:00","userId":847,"username":"Yenal","usersurname":"Gogebakan"}
+{"func":"CMD GetUser","level":"info","msg":"command executed successfully","package":"commands","source":"concreteCommands.go","time":"2021-01-15T16:16:52+03:00"}
+{"func":"main ()","level":"info","msg":"Expenses is starting !!!","package":"main","source":"main.go","time":"2021-01-15T16:18:03+03:00"}
+{"func":"GetUserByName","level":"info","msg":"Yenal isimli kullanici bulundu","package":"repository","source":"repository.go","time":"2021-01-15T16:18:05+03:00","userId":847,"username":"Yenal","usersurname":"Gogebakan"}
+{"func":"CMD GetUser","level":"info","msg":"command executed successfully","package":"commands","source":"concreteCommands.go","time":"2021-01-15T16:18:05+03:00"}
+{"func":"main ()","level":"info","msg":"Expenses is starting !!!","package":"main","source":"main.go","time":"2021-01-15T16:21:33+03:00"}
+{"func":"GetUserByName","level":"info","msg":"Yenal isimli kullanici bulundu","package":"repository","source":"repository.go","time":"2021-01-15T16:21:35+03:00","userId":847,"username":"Yenal","usersurname":"Gogebakan"}
+{"func":"CMD GetUser","level":"info","msg":"command executed successfully","package":"commands","source":"concreteCommands.go","time":"2021-01-15T16:21:35+03:00"}
+{"func":"main ()","level":"info","msg":"Expenses is starting !!!","package":"main","source":"main.go","time":"2021-01-15T16:23:21+03:00"}
+{"func":"GetUserByName","level":"info","msg":"Yenal isimli kullanici bulundu","package":"repository","source":"repository.go","time":"2021-01-15T16:23:23+03:00","userId":847,"username":"Yenal","usersurname":"Gogebakan"}
+{"func":"CMD GetUser","level":"info","msg":"command executed successfully","package":"commands","source":"concreteCommands.go","time":"2021-01-15T16:23:23+03:00"}
+{"func":"main ()","level":"info","msg":"Expenses is starting !!!","package":"main","source":"main.go","time":"2021-01-15T16:43:22+03:00"}
+{"func":"GetUserByName","level":"info","msg":"Yenal isimli kullanici bulundu","package":"repository","source":"repository.go","time":"2021-01-15T16:43:25+03:00","userId":847,"username":"Yenal","usersurname":"Gogebakan"}
+{"func":"CMD GetUser","level":"info","msg":"command executed successfully","package":"commands","source":"concreteCommands.go","time":"2021-01-15T16:43:25+03:00"}
+{"func":"main ()","level":"info","msg":"Expenses is starting !!!","package":"main","source":"main.go","time":"2021-01-15T16:48:19+03:00"}
+{"func":"GetUserByName","level":"info","msg":"Yenal isimli kullanici bulundu","package":"repository","source":"repository.go","time":"2021-01-15T16:48:21+03:00","userId":847,"username":"Yenal","usersurname":"Gogebakan"}
+{"func":"CMD GetUser","level":"info","msg":"command executed successfully","package":"commands","source":"concreteCommands.go","time":"2021-01-15T16:48:21+03:00"}
+{"func":"GetUserByName","level":"info","msg":"YENAL isimli kullanici bulundu","package":"repository","source":"repository.go","time":"2021-01-15T16:48:51+03:00","userId":887,"username":"YENAL","usersurname":"GOGEBAKAN"}
