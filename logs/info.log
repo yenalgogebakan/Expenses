@@ -95,3 +95,5 @@
 {"func":"GetUserByName","level":"info","msg":"Yenal isimli kullanici bulundu","package":"repository","source":"repository.go","time":"2021-01-15T16:48:21+03:00","userId":847,"username":"Yenal","usersurname":"Gogebakan"}
 {"func":"CMD GetUser","level":"info","msg":"command executed successfully","package":"commands","source":"concreteCommands.go","time":"2021-01-15T16:48:21+03:00"}
 {"func":"GetUserByName","level":"info","msg":"YENAL isimli kullanici bulundu","package":"repository","source":"repository.go","time":"2021-01-15T16:48:51+03:00","userId":887,"username":"YENAL","usersurname":"GOGEBAKAN"}
+{"func":"main ()","level":"info","msg":"Expenses is starting !!!","package":"main","source":"main.go","time":"2021-01-17T14:38:06+03:00"}
+{"func":"main ()","level":"info","msg":"Expenses is starting !!!","package":"main","source":"main.go","time":"2021-01-17T14:42:37+03:00"}

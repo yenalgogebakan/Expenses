@@ -10,4 +10,5 @@
 #curl -d '{"Name": "Ali", "Surname": "Deneme"}' -H "Content-Type: application/json" -X PUT localhost:8085/v1/users
 #curl -d '{"XXX": "Ali", "Surname": "Deneme"}' -H "Content-Type: application/json" -X PUT localhost:8085/v1/users
 #curl  -X GET localhost:8085/v1/users/Yenal
-curl  -X GET localhost:8085/v1/users/YENAL
+#curl  -X GET localhost:8085/v1/users/YENAL
+curl -d '{"servicename": "ListUsers"}' -H "Content-Type: application/json" -X POST localhost:8085/v1/services

@@ -1,15 +1,43 @@
 package main
 
 import (
-//	"fmt"
+	"fmt"
 //	"net/http"
 //	"io/ioutil"
+	"encoding/json"
 	"github.com/sirupsen/logrus"
 	"logging"
 	"github.com/gin-gonic/gin"
 	"commands"
 	"domain"
 )
+
+func servicemux (c *gin.Context) {
+	services := make(map[string]interface{})
+	var reqdata []byte
+	var err error
+
+	if reqdata, err = c.GetRawData (); err != nil {
+		fmt.Println ("Cannot get reqdata")
+		c.JSON (200, gin.H{"exception":"reqdata alinamadi"})
+	}
+	
+	if err = json.Unmarshal(reqdata, &services); err != nil {
+		fmt.Println ("error in json")
+		fmt.Println (c.GetRawData())
+	} else {
+		fmt.Println ("switch e firdi")
+		fmt.Println (services["servicename"])
+		switch services ["servicename"] {
+			case "GetuserById":
+				fmt.Println ("Sername : GetUserById")
+			case "ListUsers":
+				fmt.Println ("Sername : ListUsers")
+			case "GetExpenseById":
+				fmt.Println ("Sername : GetEspenceById")
+		}
+	}
+}
 
 func newuser (c *gin.Context) {
 	var user domain.User
